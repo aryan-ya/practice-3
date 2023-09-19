@@ -2,6 +2,7 @@ import { ColorModeScript , ChakraProvider } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import App from './App';
+import ColorModeSwitcher from "./ColorModeSwitcher";
 
 
 const container = document.getElementById('root');
@@ -12,7 +13,10 @@ root.render(
     <ColorModeScript />
 
     <ChakraProvider>
-    <App />
+      <ColorModeSwitcher>
+       <App/> 
+      </ColorModeSwitcher>
+  
     </ChakraProvider>
   
   </StrictMode>
