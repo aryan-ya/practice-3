@@ -49,33 +49,42 @@ const Header = () => {
         <DrawerHeader>Video Hub</DrawerHeader>
          <DrawerBody>
           <VStack alignItems={'flex-start'}>
-           <Button  variant={"ghost"} colorScheme='purple'>
+           <Button  onClick={onClose}  variant={"ghost"} colorScheme='purple'>
             <Link to={'/'}>Home</Link>
            </Button>
 
-           <Button  variant={"ghost"} colorScheme='purple'>
+           <Button   onClick={onClose}variant={"ghost"} colorScheme='purple'>
             <Link to={'/videos'}>Videos</Link>
            </Button>
 
 
-           <Button variant={"ghost"} colorScheme='purple'>
+           <Button onClick={onClose} variant={"ghost"} colorScheme='purple'>
             <Link to={'/videos?category=free'}>Free Videos</Link>
            </Button>
 
 
-           <Button  variant={"ghost"} colorScheme='purple'>
+           <Button  onClick={onClose}
+            variant={"ghost"} colorScheme='purple'>
             <Link to={'/upload'}>Upload video</Link>
            </Button>
           </VStack>
 
 
 
-          <HStack pos={"absolute"} bottom={"10"} left={"0"} >
-              <Button colorScheme={'purple'}>
+          <HStack 
+          pos={"absolute"}
+           bottom={"10"}
+          left={"0"}
+          w={'full'}
+          justifyContent={'space-evenly'}
+          
+          >
+              <Button onClick={onClose}
+                 colorScheme={'purple'}>
                <Link to={'/login'}>log in</Link>
               </Button>
 
-              <Button  colorScheme={'purple'}  variant={'outline'}>
+              <Button onClick={onClose}  colorScheme={'purple'}  variant={'outline'}>
                <Link to={'/signup'}>Sign up</Link>
               </Button>
           </HStack>
